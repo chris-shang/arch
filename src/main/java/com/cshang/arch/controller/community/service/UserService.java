@@ -7,6 +7,8 @@ import com.cshang.arch.controller.community.model.User;
 
 public interface UserService {
 
-    CompletableFuture<Optional<User>> findUserByHandle(String handle);
+    CompletableFuture<Optional<User>> findUserByUserName(String userName);
+
+    CompletableFuture<User> saveUser(User user);
 
 }

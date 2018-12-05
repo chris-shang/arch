@@ -1,6 +1,7 @@
 package com.cshang.arch.controller.community.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,10 +24,7 @@ public class User {
 
     private String email;
 
-    @Column(nullable = false)
-    @NotNull
-    private String handle;
-
+    @Embedded
     private Password password;
 
     public Long getId() {
@@ -51,14 +49,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getHandle() {
-        return handle;
-    }
-
-    public void setHandle(String handle) {
-        this.handle = handle;
     }
 
     public Password getPassword() {

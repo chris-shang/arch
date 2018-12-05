@@ -2,16 +2,16 @@ package com.cshang.arch.controller.community.model;
 
 public class LoginRequest {
 
-    private String handle;
+    private String userName;
     private String email;
     private String password;
 
-    public String getHandle() {
-        return handle;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setHandle(String handle) {
-        this.handle = handle;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getEmail() {

@@ -98,7 +98,7 @@ public class Password {
         return saltBuilder.toString();
     }
 
-    private String encryptPasswordWithBCrypt(String salt, String password) {
+    public static String encryptPasswordWithBCrypt(String salt, String password) {
         // the "$2a$07$ makes us match the Sugar algorithm (2^7 rounds of blowfish)
         return BCrypt.hashpw(password, "$2a$07$" + salt);
     }
